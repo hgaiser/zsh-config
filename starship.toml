@@ -2,7 +2,7 @@
 add_newline = false
 
 format = """
-($username(@$hostname):)\
+[($username(@$hostname):)](bold yellow)\
 $directory\
 [(\\($git_branch$git_status\\))](bold cyan)\
 $jobs\
