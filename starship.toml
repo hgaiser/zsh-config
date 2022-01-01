@@ -1,0 +1,50 @@
+# Inserts a blank line between shell prompts
+add_newline = false
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$jobs\
+$character\
+"""
+
+[directory]
+truncation_length = 16
+truncate_to_repo = false
+truncation_symbol = "../"
+format = "[$path]($style)[$read_only]($read_only_style)"
+style = "bold green"
+
+[username]
+format = "[$user]($style)"
+
+[jobs]
+format = "\\[[$number]($style)\\]"
+number_threshold = 1
+
+[git_branch]
+format = "[\\($branch\\)]($style)"
+style = "bold cyan"
+
+[git_status]
+format = "([\\[$conflicted$stashed$deleted$renamed$modified$staged\\]]($style))"
+style = "bold cyan"
+conflicted = "x"
+ahead = ""
+behind = ""
+diverged = ""
+up_to_date = "="
+untracked = ""
+stashed = "$"
+modified = "∗"
+staged = "+"
+renamed = ""
+deleted = ""
+
+[character]
+format = " $symbol "
+success_symbol = "[\\$](bold green)"
+error_symbol = "[\\$](bold red)"

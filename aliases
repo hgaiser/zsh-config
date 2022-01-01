@@ -1,0 +1,31 @@
+if test_command exa; then
+	alias ls='exa --git -g'
+	alias tree='exa --tree -g'
+elif test_command gnuls; then
+	alias ls='gnuls --color=auto'
+elif test_command gls; then
+	alias ls='gls --color=auto'
+else
+	alias ls='ls --color=auto'
+fi
+
+alias lla='ls -alF --group-directories-first'
+alias ll='ls -lF --group-directories-first'
+alias la='ls -A --group-directories-first'
+alias l='ls -F --group-directories-first'
+
+alias clip='xclip -i -selection clipboard'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+if test_command nvim; then
+	alias vim=nvim
+fi
+
+alias ..='cd ..'
+
+[ -e "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
+
+# vi: ft=sh
