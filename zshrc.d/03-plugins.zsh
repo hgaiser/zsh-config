@@ -27,7 +27,4 @@ plugins=(
 )
 
 # Load plugins.
-for repo in $plugins; do
-	plugin-load https://github.com/${repo}.git
-done
-unset repo
+plugin-load $plugins
