@@ -2,9 +2,9 @@
 add_newline = false
 
 format = """
-[($username(@$hostname):)](bold yellow)\
+[($username(@$hostname):)](green)\
 $directory\
-[(\\($git_branch$git_status\\))](bold cyan)\
+[(\\($git_branch$git_status\\))](yellow)\
 $jobs\
 $character\
 """
@@ -14,28 +14,31 @@ truncation_length = 16
 truncate_to_repo = false
 truncation_symbol = "../"
 format = "[$path]($style)[$read_only]($read_only_style)"
-style = "bold green"
+style = "blue"
 
 [username]
 format = "[$user]($style)"
-style_user = "bold yellow"
+style_user = "green"
 style_root = "bold red"
+show_always = false
 
 [hostname]
-style = "bold yellow"
+style = "green"
 format = "[$hostname]($style)"
+ssh_only = true
 
 [jobs]
 format = "\\[[$number]($style)\\]"
 number_threshold = 1
+style = ""
 
 [git_branch]
 format = "[$branch]($style)"
-style = "bold cyan"
+style = "yellow"
 
 [git_status]
 format = "([$all_status$ahead_behind]($style))"
-style = "bold cyan"
+style = "yellow"
 conflicted = "x"
 ahead = "+${count}"
 behind = "-${count}"
@@ -48,6 +51,6 @@ renamed = ""
 deleted = ""
 
 [character]
-format = " $symbol "
-success_symbol = "[\\$](bold green)"
-error_symbol = "[\\$](bold red)"
+format = "$symbol "
+success_symbol = "[\\$](green)"
+error_symbol = "[\\$](red)"
