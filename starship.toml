@@ -2,8 +2,7 @@
 add_newline = false
 
 format = """
-$username\
-$hostname\
+($username(@$hostname):)\
 $directory\
 $git_branch\
 $git_status\
@@ -20,6 +19,12 @@ style = "bold green"
 
 [username]
 format = "[$user]($style)"
+style_user = "bold yellow"
+style_root = "bold red"
+
+[hostname]
+style = "bold yellow"
+format = "[$hostname]($style)"
 
 [jobs]
 format = "\\[[$number]($style)\\]"
