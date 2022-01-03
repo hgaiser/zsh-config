@@ -4,6 +4,9 @@ HISTFILE=$ZDOTDIR/history
 HISTSIZE=100000
 SAVEHIST=100000
 
+# ^W removes part of a path separated by /.
+WORDCHARS=${WORDCHARS/\/}
+
 setopt auto_cd          # If the command is a directory name, cd into it.
 setopt appendhistory    # Append to history, instead of replacing it.
 setopt auto_pushd       # Make cd push the old directory onto the directory stack.
