@@ -5,7 +5,7 @@ format = """
 [($username(@$hostname):)](green)\
 $directory\
 [(\\($git_branch$git_status\\))](yellow)\
-$python\
+[(\\($python\\))](bright-cyan)\
 $jobs\
 $character\
 """
@@ -40,14 +40,14 @@ ahead = "+${count}"
 behind = "-${count}"
 diverged = "+${ahead_count}-${behind_count}"
 untracked = ""
-stashed = "$"
+stashed = "\\$"
 modified = "∗"
 staged = "∗"
 renamed = ""
 deleted = ""
 
 [python]
-format = "[\\($virtualenv\\)]($style)"
+format = "[$virtualenv]($style)"
 style = "bright-cyan"
 
 [jobs]
