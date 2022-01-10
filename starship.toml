@@ -5,6 +5,7 @@ format = """
 [($username(@$hostname):)](green)\
 $directory\
 [(\\($git_branch$git_status\\))](yellow)\
+$python\
 $jobs\
 $character\
 """
@@ -54,3 +55,7 @@ deleted = ""
 format = " $symbol "
 success_symbol = "[\\$](green)"
 error_symbol = "[\\$](red)"
+
+[python]
+format = "[\\($virtualenv\\)]($style)"
+style = "bright-cyan"
