@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Disable Ctrl-S / Ctrl-Q starting / stopping output signals to the terminal.
+stty start undef stop undef
+
 HISTFILE=$ZDOTDIR/history
 HISTSIZE=100000
 SAVEHIST=100000
