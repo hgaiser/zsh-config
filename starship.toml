@@ -7,6 +7,8 @@ $directory\
 [(\\($git_branch$git_status\\))](yellow)\
 [(\\($python\\))](bright-cyan)\
 $jobs\
+[ ]()\
+$status\
 $character\
 """
 
@@ -56,8 +58,13 @@ format = "\\[[$number]($style)\\]"
 number_threshold = 1
 style = ""
 
+[status]
+disabled = false
+format = "([$status-]($style))"
+style = "red"
+
 [character]
-format = " $symbol "
+format = "$symbol "
 success_symbol = "[\\$](green)"
 error_symbol = "[\\$](red)"
 
@@ -158,8 +165,6 @@ disabled = true
 [shlvl]
 disabled = true
 [singularity]
-disabled = true
-[status]
 disabled = true
 [sudo]
 disabled = true
