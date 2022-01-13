@@ -60,7 +60,7 @@ style = ""
 
 [status]
 disabled = false
-format = "([$status-]($style))"
+format = "([$symbol$status$symbol]($style))"
 style = "red"
 
 [character]
