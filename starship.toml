@@ -59,14 +59,14 @@ number_threshold = 1
 style = ""
 
 [status]
-disabled = false
+disabled = true
 format = "([$symbol$status$symbol]($style))"
 style = "red"
 
 [character]
 format = "$symbol "
-success_symbol = "[\\$](green)"
-error_symbol = "[\\$](red)"
+success_symbol = "[❯](green)"
+error_symbol = "[❯](green)"
 
 [aws]
 disabled = true
