@@ -9,7 +9,8 @@ $directory\
 $jobs\
 [ ]()\
 $status\
-$character\
+${custom.user_character}\
+${custom.root_character}\
 """
 
 [username]
@@ -63,10 +64,17 @@ disabled = true
 format = "([$symbol$status$symbol]($style))"
 style = "red"
 
-[character]
-format = "$symbol "
-success_symbol = "[❯](green)"
-error_symbol = "[❯](green)"
+[custom.user_character]
+command = "echo '❯'"
+when = "[[ $(id -u) -ne 0 ]]"
+format = "[$output ]($style)"
+style = "green"
+
+[custom.root_character]
+command = "echo '❯❯'"
+when = "[[ $(id -u) -eq 0 ]]"
+format = "[$output ]($style)"
+style = "red"
 
 [aws]
 disabled = true
