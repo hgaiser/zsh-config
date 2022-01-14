@@ -1,6 +1,9 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
+# Increase the command timeout because git is sometimes reacting slowly.
+command_timeout = 1000
+
 format = """
 [($username(@$hostname):)](green)\
 $directory\
