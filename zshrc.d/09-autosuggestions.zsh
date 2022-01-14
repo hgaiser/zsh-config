@@ -8,3 +8,6 @@ autosuggest-accept-and-fetch() { zle autosuggest-fetch; zle forward-char }
 zle -N autosuggest-accept-and-fetch
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(autosuggest-accept-and-fetch)
 bindkey "^@" autosuggest-accept-and-fetch
+
+# Make the suggestions "light gray" instead of "dark gray".
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
