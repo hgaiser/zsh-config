@@ -12,8 +12,7 @@ source $ZPLUGINDIR/zsh_unplugged/unplugged.zsh
 
 # List of plugins to install.
 plugins=(
-	# Automatically suggest commands based on history.
-	zsh-users/zsh-autosuggestions
+	# Use typed command as substring search through history.
 	zsh-users/zsh-history-substring-search
 
 	# A smarter cd.
@@ -24,6 +23,8 @@ plugins=(
 
 	# Color settings.
 	hgaiser/gruvbox-zsh
+
+	romkatv/powerlevel10k
 )
 
 # Load plugins.
