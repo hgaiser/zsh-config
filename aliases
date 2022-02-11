@@ -26,6 +26,8 @@ fi
 
 alias ..='cd ..'
 
+alias o='xdg-open'
+
 [ -e "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
 
 # vi: ft=sh
