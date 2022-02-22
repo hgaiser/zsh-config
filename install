@@ -74,4 +74,8 @@ ln -sf $(realpath $(dirname "$0"))/zshenv $HOME/.zshenv
 ln -sf $(realpath $(dirname "$0"))/aliases $HOME/.aliases
 ln -sf $(realpath $(dirname "$0"))/profile $HOME/.profile
 
+msg "Setting shell to zsh."
+[[ ! -f "/usr/bin/zsh" ]] && exit_error "Zsh executable not found at /usr/bin/zsh."
+chsh --shell /usr/bin/zsh
+
 msg2 "Done."
